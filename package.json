@@ -1,0 +1,15 @@
+{
+  "name": "cast-with-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jquery.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Smit Desai",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1"
+  }
+}
