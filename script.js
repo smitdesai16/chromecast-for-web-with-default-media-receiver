@@ -137,22 +137,22 @@ $( document ).ready(function(){
     }
 
 	$('#playPauseVideo').click(function(){
-		if(session.media[0]) {
-			switch(session.media[0].playerState) {
+		if(session.media.slice(-1)[0]) {
+			switch(session.media.slice(-1)[0].playerState) {
 				case 'PLAYING':
-					session.media[0].pause();
+					session.media.slice(-1)[0].pause();
 					break;
 
 				case 'PAUSED':
-					session.media[0].play()
+					session.media.slice(-1)[0].play()
 					break;
 			}
 		}
     });
 
 	$('#stopVideo').click(function(){
-		if(session.media[0]) {
-			session.media[0].stop();
+		if(session.media.slice(-1)[0]) {
+			session.media.slice(-1)[0].stop();
 		}
     });
 
