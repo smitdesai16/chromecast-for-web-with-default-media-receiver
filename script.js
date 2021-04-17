@@ -82,8 +82,7 @@ $( document ).ready(function(){
             return;
         }
 
-        var mediaInfo = new chrome.cast.media.MediaInfo('https://file-examples.com/wp-content/uploads/2017/10/file_example_JPG_100kB.jpg');
-        mediaInfo.contentType = 'image/jpg';
+        var mediaInfo = new chrome.cast.media.MediaInfo('https://www.google.com/logos/doodles/2021/celebrating-laura-bassi-6753651837109199-l.png', 'image/png');
   
         var request = new chrome.cast.media.LoadRequest(mediaInfo);
         request.autoplay = true;
@@ -105,8 +104,7 @@ $( document ).ready(function(){
             return;
         }
 
-        var mediaInfo = new chrome.cast.media.MediaInfo('https://file-examples.com/wp-content/uploads/2017/11/file_example_MP3_700KB.mp3');
-        mediaInfo.contentType = 'audio/mpeg';
+        var mediaInfo = new chrome.cast.media.MediaInfo('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3', 'audio/mpeg');
   
         var request = new chrome.cast.media.LoadRequest(mediaInfo);
         request.autoplay = true;
@@ -132,15 +130,31 @@ $( document ).ready(function(){
             return;
         }
 
-        var mediaInfo = new chrome.cast.media.MediaInfo('https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4');
-        mediaInfo.contentType = 'video/mp4';
-  
-        var request = new chrome.cast.media.LoadRequest(mediaInfo);
-        request.autoplay = true;
+		var mediaInfo = new chrome.cast.media.MediaInfo('http://commondatastorage.googleapis.com/gtv-videos-bucket/big_buck_bunny_1080p.mp4', 'video/mp4');
+		var request = new chrome.cast.media.LoadRequest(mediaInfo);
 
         session.loadMedia(request, onLoadSuccess, onLoadError);
     }
 
+	$('#playPauseVideo').click(function(){
+		if(session.media[0]) {
+			switch(session.media[0].playerState) {
+				case 'PLAYING':
+					session.media[0].pause();
+					break;
+
+				case 'PAUSED':
+					session.media[0].play()
+					break;
+			}
+		}
+    });
+
+	$('#stopVideo').click(function(){
+		if(session.media[0]) {
+			session.media[0].stop();
+		}
+    });
 
 
 
@@ -149,11 +163,11 @@ $( document ).ready(function(){
     
     //success error in loadMedia
     function onLoadSuccess() {
-        console.log('Successfully loaded image.');
+        console.log('Successfully loaded.');
     }
 
     function onLoadError() {
-        console.log('Failed to load image.');
+        console.log('Failed to load.');
     }
 
 
