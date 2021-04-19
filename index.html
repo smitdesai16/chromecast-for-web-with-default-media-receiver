@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cast With Browser</title>
-    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Cast With Browser</title>
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
 </head>
 <body>
 
-    <div class="container my-4">
-        <div class="row">
-            <div class="col-sm-12 text-right">
-                <button type="button" id="castme" class="btn btn-primary">Cast</button>
-                <button type="button" id="stop" class="btn btn-danger">Stop</button>
-            </div>
-        </div>
-    </div>
+	<div class="container my-4">
+		<div class="row">
+			<div class="col-sm-12 text-right">
+				<button type="button" id="castme" class="btn btn-primary">Cast</button>
+				<button type="button" id="stop" class="btn btn-danger">Stop</button>
+			</div>
+		</div>
+	</div>
 
-    <hr>
+	<hr>
 
-    <div class="container my-4">
-        <div class="row">
-            <div class="col-sm-12">
+	<div class="container my-4">
+		<div class="row">
+			<div class="col-sm-12">
 				<h1>Chromecast Default Media Player</h1>
 
 				<hr>
@@ -30,20 +30,28 @@
 				<h2>Image</h2>
 				<button type="button" id="image" class="btn btn-primary my-1">Load Image</button>
 
+				<br><br>
+
 				<h2>Audio</h2>
-                <button type="button" id="audio" class="btn btn-primary my-1">Load Audio</button>
+				<button type="button" id="audio" class="btn btn-primary my-1">Load Audio</button>
+
+				<br><br>
 
 				<h2>Video</h2>
-                <button type="button" id="video" class="btn btn-primary my-1">Load</button>
+				<button type="button" id="video" class="btn btn-primary my-1">Load</button>
+
+				<br><br>
+
+				<h2>Player Functionality</h2>
 				<button type="button" id="playPauseVideo" class="btn btn-primary my-1">Play/Pause</button>
 				<button type="button" id="stopVideo" class="btn btn-primary my-1">Stop</button>
-            </div>
-        </div>
-    </div>
+			</div>
+		</div>
+	</div>
 
-    
-    <script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
-    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+	
+	<script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
+	<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
